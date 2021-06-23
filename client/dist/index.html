@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fallout Password Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="logo">Fallout Style Password Game</h1>
+    <div id="main-container">
+      <div class="memory-address" id="mem-display-1"></div>
+      <div class="debug-data" id="debug-area-1"></div>
+
+      <div class="memory-address" id="mem-display-2"></div>
+      <div class="debug-data" id="debug-area-2"></div>
+
+      <div id="selected-output">> <span id="current-output"></span></div>
+      <div id="status-message"></div>
+      <div id="attempt-container">****</div>
+      <div class="button-container">
+        <button type="button" class="reset-button" id="reset-button">
+          Reset
+        </button>
+      </div>
+    </div>
+    <div id="access-granted">ACCESS GRANTED</div>
+    <div id="access-denied">
+      ACCESS DENIED PLEASE REPORT TO THE NEAREST AUTHORITIES
+    </div>
+    <script src="js/main.bundle.js"></script>
+  </body>
+</html>

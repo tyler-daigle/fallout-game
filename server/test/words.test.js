@@ -6,12 +6,12 @@ const request = require("supertest");
 const wordApp = require("../routes/words");
 
 describe("The /words endpoint", () => {
-  test("/words should return a json object", async done => {
-    await request(wordApp)
+  test("/words should return a json object",async done => {
+    request(wordApp)
       .get("/words")
-      .expect("Content-Type", /json/);
+      .expect("Content-Type", /json/).then(done);
 
-    done();
+    // done();
   });
   test("/words should return a json object with a words property: {words: []}", async done => {
     const res = await request(wordApp).get("/words");

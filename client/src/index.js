@@ -67,12 +67,13 @@ function loadUi() {
 }
 
 function passwordChecker(passwordChar) {
-  console.log("pw checker");
   const pc = passwordChar;
   if (gameSettings.gameOver) {
     return;
   }
 
+  // when player clicks on a character we get the dataset.characterId value and then
+  // use that to find all the characters that make up the password. 
   const guess = getPasswordWithId(pc.dataset.characterId);
 
   if (guess.toLowerCase() === gameSettings.correctPassword) {
@@ -93,6 +94,10 @@ function passwordChecker(passwordChar) {
     if (gameSettings.attempts === 0) {
       showAccessDenied();
       gameSettings.gameOver = true;
+      setTimeout(() => {
+        hideAccessDenied();
+        resetGame();
+      }, 3000);
     }
     showAttemptsLeft(gameSettings.attempts);
   }

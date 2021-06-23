@@ -29,9 +29,9 @@ let wordListCreator;
   }
 })();
 
-// app.use(cors());
+app.use(cors());
 const corsOptions = {
-  origin: "http://localhost:8080"
+  // origin: "http://localhost:8080"
 };
 
 app.get("/words", cors(corsOptions), (req, res) => {
