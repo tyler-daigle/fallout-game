@@ -4,8 +4,6 @@
 
 ## About this game
 
----
-
 This is my attempt at Fallout hacking minigame. If you have ever played any of the
 fallout games then you have most likely seen the hacking minigame where you have
 to guess a password.
@@ -13,8 +11,6 @@ to guess a password.
 This is still a work in progress.
 
 ## Tech Used
-
----
 
 The game was built using **Vanilla JavaScript** and **Webpack** for bundling the source.
 
@@ -26,14 +22,10 @@ also reset after 3 seconds.
 
 ## The word server
 
----
-
 The game uses an express server that provides a list of random words for the game. You
 can find the actual word list in server/data/bigwordlist.txt.
 
 ## Things I want to add:
-
----
 
   - An overlay for when the game finishes.
   - A settings dialog for changing difficulty (word length)
@@ -42,8 +34,6 @@ can find the actual word list in server/data/bigwordlist.txt.
   - Make it more responsive on mobile.
 
 ## Setting the game up
-
----
 
 ### Client Side
 
@@ -72,8 +62,6 @@ const apiUrl = `http://localhost:8000/words?count=${numWords}&length=${wordLengt
 ```
 
 ### Backend
-
----
 
 The backend is an express app and is located in the **server/** directory.
 
